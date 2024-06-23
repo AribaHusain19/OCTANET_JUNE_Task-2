@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    
+    background-image: url("./image/background_unsplash.jpg");
+    background-size: cover;  
+    background-repeat: no-repeat ; 
+    background-position: center center; 
+    min-height: 100vh;
+    
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-section {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input, #priority-select, #due-date, #add-task-button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    flex: 1 1 100%; 
+    box-sizing: border-box; 
+}
+
+#add-task-button {
+    background-color: #00796B;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    flex: 1 1 auto; 
+}
+
+#add-task-button:hover {
+    background-color: #AFB42B;
+}
+
+.tasks-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tasks-section li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.tasks-section .task-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tasks-section .task-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.tasks-section button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.tasks-section .complete-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.tasks-section .complete-btn:hover {
+    background-color: #0056b3;
+}
+
+.tasks-section .delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.tasks-section .delete-btn:hover {
+    background-color: #c82333;
+}
+
+.task-completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    #task-input, #priority-select, #due-date, #add-task-button {
+        width: 100%;
+        margin-bottom: 10px; 
+    }
+    
+    #add-task-button {
+        width: auto; 
+    }
+}
